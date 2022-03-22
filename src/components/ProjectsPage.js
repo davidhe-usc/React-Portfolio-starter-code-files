@@ -19,6 +19,7 @@ background-attachment: fixed;
 background-position: right;
 width: auto;
 height: 100vh;
+z-index: 1;
 `
 
 const Container = styled.div`
@@ -26,6 +27,12 @@ background-color: ${props => `rgba(${props.theme.bodyRgba}, 0.8)`};
 width: 100%;
 height: 100%;
 position: relative;
+`
+
+const Grid = styled.div`
+display: grid;
+grid-template-columns: repeat(2, minimax(calc(10rem + 15vw), 1fr));
+grid-gap: calc(1rem + 2vw);
 `
 
 const ProjectsPage = () => {

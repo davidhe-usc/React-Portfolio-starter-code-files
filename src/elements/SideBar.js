@@ -8,6 +8,7 @@ import * as faIcons from 'react-icons/fa'
 import * as bsIcons from 'react-icons/bs'
 
 import "./SideBar.css"
+import { lightTheme } from '../components/Themes';
 
 export const navBar = styled.div`
 height: 100vh;
@@ -21,14 +22,14 @@ const SideBar = (props) => {
         menuCollapsed ? setmenuCollapsed(false) : setmenuCollapsed(true);
     };
 
-    if (props.themeColor === "light"){
+    if (props.themeColor === lightTheme){
         return (
             <navBar id="lightSidebar">
                 <ProSidebar style = {{color: props.themeColor}}> 
                     <SidebarHeader>
                         <div onClick={menuIconClick} style = {{left: "2%"}}>
                             <Menu>
-                                <MenuItem icon={<faIcons.FaBars />}>MENU</MenuItem>
+                                <MenuItem icon={<faIcons.FaBars />}>NAVIGATION</MenuItem>
                             </Menu>                    
                         </div>
                     </SidebarHeader>

@@ -45,7 +45,7 @@
 }
 
 #lightSidebar .pro-sidebar .pro-sidebar-content .pro-menu .pro-menu-item:hover {
-    background-color: rgba(212, 212, 212, 1);
+    background-color: rgba(212, 212, 212, 0.8);
 }
 
 #lightSidebar .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover {
@@ -61,7 +61,7 @@
 }
 
 #darkSidebar .pro-sidebar .pro-sidebar-content .pro-menu .pro-menu-item:hover {
-    background-color: rgba(64, 64, 64, 1);
+    background-color: rgba(64, 64, 64, 0.8);
 }
 
 #darkSidebar .pro-sidebar .pro-menu .pro-menu-item > .pro-inner-item:hover {

@@ -9,6 +9,7 @@ import { MainContainer} from '../elements/MainContent'
 import { Logo } from '../components/SVGComponents'
 
 import {HiMail} from 'react-icons/hi'
+import { darkTheme, lightTheme } from './Themes'
 
 const beating = keyframes`
 0%, 50%{
@@ -56,7 +57,7 @@ const ImageContainer = styled(MainContainer)`
 background-image: linear-gradient(300deg, #3D76BA 0%, #000000 70%);
 `
 
-const Main = () => {
+const Main = (props) => {
   //set state variables for collapsed and uncollapsed
   const [buttonCollapsed, setbuttonCollapsed] = useState(false);
   const [buttonHovered, setbuttonHovered] = useState(false);
@@ -71,7 +72,7 @@ const Main = () => {
   return (
     <ImageContainer>
       <LightDiv buttonCollapsed={buttonCollapsed}/>
-      <SideBar themeColor={buttonCollapsed ? "light" : "dark"} />
+      <SideBar themeColor={buttonCollapsed ? lightTheme : darkTheme} />
       <SocialIcons />
       <Landing buttonCollapsed={buttonCollapsed} onClick={buttonClick} onMouseEnter={() => {setbuttonHovered(true)}} onMouseLeave={() => {setbuttonHovered(false)}} target="_blank" to={buttonCollapsed ? {pathname: "mailto:davidhe@usc.edu"} : {}}>
         { (buttonCollapsed && buttonHovered) ? 

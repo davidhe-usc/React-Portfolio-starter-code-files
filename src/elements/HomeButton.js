@@ -26,7 +26,9 @@ z-index: 3;
 cursor: pointer;
 
 transition: all 1s ease;
+
 &:hover{
-  background-color: ${props => props.invertColor? 'rgba(0, 0, 0, 0.5)' : 'rgba(200, 200, 200, 0.5)'};
+  background-color: ${props => props.invertColor? props.theme.highlightColor : props.theme.invertHighlightColor};
+  color: ${props => props.invertColor? props.theme.invertHighlightColor : props.theme.highlightColor};
 }
 `
